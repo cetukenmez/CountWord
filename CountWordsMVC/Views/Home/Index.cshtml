@@ -1,0 +1,36 @@
+﻿@using CountWordsMVC.Models
+@model IEnumerable<Words>
+
+@{
+    Layout = null;
+
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+
+</head>
+<body align="center">
+    <table class="table table-condensed table-hover table-striped  " border="1" style="margin-top:25px">
+        <tr>
+
+            <th class="text-center">Word</th>
+            <th class="text-center">Count</th>
+        </tr>
+        @foreach (Words words in Model)
+        {
+            <tr>
+                <td>@words.word</td>
+                <td>@words.count</td>
+               
+            </tr>
+        }
+    </table>
+</body>
+</html>
